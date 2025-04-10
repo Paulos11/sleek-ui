@@ -1,0 +1,196 @@
+/* Toast Component */
+.sleek-toast-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sleek-spacing-sm);
+    z-index: var(--sleek-z-toast);
+    pointer-events: none;
+    padding: var(--sleek-spacing-md);
+  }
+  
+  /* Toast positions */
+  .sleek-toast-container-top-right {
+    top: 0;
+    right: 0;
+  }
+  
+  .sleek-toast-container-top-left {
+    top: 0;
+    left: 0;
+  }
+  
+  .sleek-toast-container-top-center {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .sleek-toast-container-bottom-right {
+    bottom: 0;
+    right: 0;
+  }
+  
+  .sleek-toast-container-bottom-left {
+    bottom: 0;
+    left: 0;
+  }
+  
+  .sleek-toast-container-bottom-center {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Toast */
+  .sleek-toast {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding: var(--sleek-spacing-md);
+    margin: 0;
+    background-color: var(--sleek-background);
+    color: var(--sleek-text);
+    border-radius: var(--sleek-border-radius-md);
+    box-shadow: var(--sleek-shadow-md);
+    pointer-events: auto;
+    max-width: 350px;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(1rem);
+    animation: sleek-toast-in var(--sleek-transition-normal) forwards;
+  }
+  
+  .sleek-toast.sleek-toast-closing {
+    animation: sleek-toast-out var(--sleek-transition-normal) forwards;
+  }
+  
+  @keyframes sleek-toast-in {
+    from {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes sleek-toast-out {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+  }
+  
+  /* Toast variants */
+  .sleek-toast-success {
+    border-left: 4px solid var(--sleek-success);
+  }
+  
+  .sleek-toast-error {
+    border-left: 4px solid var(--sleek-error);
+  }
+  
+  .sleek-toast-warning {
+    border-left: 4px solid var(--sleek-warning);
+  }
+  
+  .sleek-toast-info {
+    border-left: 4px solid var(--sleek-info);
+  }
+  
+  /* Toast icon */
+  .sleek-toast-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    margin-right: var(--sleek-spacing-sm);
+  }
+  
+  .sleek-toast-success .sleek-toast-icon {
+    color: var(--sleek-success);
+  }
+  
+  .sleek-toast-error .sleek-toast-icon {
+    color: var(--sleek-error);
+  }
+  
+  .sleek-toast-warning .sleek-toast-icon {
+    color: var(--sleek-warning);
+  }
+  
+  .sleek-toast-info .sleek-toast-icon {
+    color: var(--sleek-info);
+  }
+  
+  /* Toast content */
+  .sleek-toast-content {
+    flex: 1;
+  }
+  
+  .sleek-toast-title {
+    margin: 0;
+    font-size: var(--sleek-font-size-md);
+    font-weight: var(--sleek-font-weight-bold);
+    margin-bottom: var(--sleek-spacing-xs);
+  }
+  
+  .sleek-toast-message {
+    margin: 0;
+    font-size: var(--sleek-font-size-sm);
+    color: var(--sleek-text-light);
+  }
+  
+  /* Toast close button */
+  .sleek-toast-close {
+    position: absolute;
+    top: var(--sleek-spacing-xs);
+    right: var(--sleek-spacing-xs);
+    padding: var(--sleek-spacing-xs);
+    background: transparent;
+    border: none;
+    color: var(--sleek-text-light);
+    cursor: pointer;
+    transition: color var(--sleek-transition-fast);
+  }
+  
+  .sleek-toast-close:hover {
+    color: var(--sleek-text);
+  }
+  
+  /* Toast progress bar */
+  .sleek-toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .sleek-toast-success .sleek-toast-progress-bar {
+    background-color: var(--sleek-success);
+  }
+  
+  .sleek-toast-error .sleek-toast-progress-bar {
+    background-color: var(--sleek-error);
+  }
+  
+  .sleek-toast-warning .sleek-toast-progress-bar {
+    background-color: var(--sleek-warning);
+  }
+  
+  .sleek-toast-info .sleek-toast-progress-bar {
+    background-color: var(--sleek-info);
+  }
+  
+  .sleek-toast-progress-bar {
+    height: 100%;
+    width: 100%;
+    transform-origin: left;
+    transition: transform linear;
+  }

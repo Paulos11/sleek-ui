@@ -1,0 +1,225 @@
+/**
+ * Sleek UI - A lightweight, accessible component library
+ * Version: 1.0.0
+ * License: MIT
+ */
+
+/* CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Import Variables */
+  @import url('./variables.css');
+  
+  /* Base Styles */
+  body {
+    font-family: var(--sleek-font-family);
+    font-size: var(--sleek-font-size-md);
+    line-height: 1.5;
+    color: var(--sleek-text);
+    background-color: var(--sleek-background);
+  }
+  
+  /* Responsive Images */
+  img, svg {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+  
+  /* Links */
+  a {
+    color: var(--sleek-primary);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Focus outline */
+  :focus-visible {
+    outline: 2px solid var(--sleek-primary);
+    outline-offset: 2px;
+  }
+  
+  /* Import Component Styles */
+  @import url('./components/button.css');
+  @import url('./components/modal.css');
+  @import url('./components/form.css');
+  @import url('./components/dropdown.css');
+  @import url('./components/toast.css');
+  @import url('./components/accordion.css');
+  @import url('./components/card.css');
+  @import url('./components/tabs.css');
+  
+  /* Utility Classes */
+  
+  /* Display */
+  .sleek-block { display: block; }
+  .sleek-inline { display: inline; }
+  .sleek-inline-block { display: inline-block; }
+  .sleek-flex { display: flex; }
+  .sleek-inline-flex { display: inline-flex; }
+  .sleek-grid { display: grid; }
+  .sleek-hidden { display: none; }
+  
+  /* Flexbox */
+  .sleek-flex-row { flex-direction: row; }
+  .sleek-flex-col { flex-direction: column; }
+  .sleek-flex-wrap { flex-wrap: wrap; }
+  .sleek-items-start { align-items: flex-start; }
+  .sleek-items-center { align-items: center; }
+  .sleek-items-end { align-items: flex-end; }
+  .sleek-justify-start { justify-content: flex-start; }
+  .sleek-justify-center { justify-content: center; }
+  .sleek-justify-end { justify-content: flex-end; }
+  .sleek-justify-between { justify-content: space-between; }
+  
+  /* Spacing */
+  .sleek-m-0 { margin: 0; }
+  .sleek-m-xs { margin: var(--sleek-spacing-xs); }
+  .sleek-m-sm { margin: var(--sleek-spacing-sm); }
+  .sleek-m-md { margin: var(--sleek-spacing-md); }
+  .sleek-m-lg { margin: var(--sleek-spacing-lg); }
+  .sleek-m-xl { margin: var(--sleek-spacing-xl); }
+  
+  .sleek-mt-0 { margin-top: 0; }
+  .sleek-mt-xs { margin-top: var(--sleek-spacing-xs); }
+  .sleek-mt-sm { margin-top: var(--sleek-spacing-sm); }
+  .sleek-mt-md { margin-top: var(--sleek-spacing-md); }
+  .sleek-mt-lg { margin-top: var(--sleek-spacing-lg); }
+  .sleek-mt-xl { margin-top: var(--sleek-spacing-xl); }
+  
+  .sleek-mr-0 { margin-right: 0; }
+  .sleek-mr-xs { margin-right: var(--sleek-spacing-xs); }
+  .sleek-mr-sm { margin-right: var(--sleek-spacing-sm); }
+  .sleek-mr-md { margin-right: var(--sleek-spacing-md); }
+  .sleek-mr-lg { margin-right: var(--sleek-spacing-lg); }
+  .sleek-mr-xl { margin-right: var(--sleek-spacing-xl); }
+  
+  .sleek-mb-0 { margin-bottom: 0; }
+  .sleek-mb-xs { margin-bottom: var(--sleek-spacing-xs); }
+  .sleek-mb-sm { margin-bottom: var(--sleek-spacing-sm); }
+  .sleek-mb-md { margin-bottom: var(--sleek-spacing-md); }
+  .sleek-mb-lg { margin-bottom: var(--sleek-spacing-lg); }
+  .sleek-mb-xl { margin-bottom: var(--sleek-spacing-xl); }
+  
+  .sleek-ml-0 { margin-left: 0; }
+  .sleek-ml-xs { margin-left: var(--sleek-spacing-xs); }
+  .sleek-ml-sm { margin-left: var(--sleek-spacing-sm); }
+  .sleek-ml-md { margin-left: var(--sleek-spacing-md); }
+  .sleek-ml-lg { margin-left: var(--sleek-spacing-lg); }
+  .sleek-ml-xl { margin-left: var(--sleek-spacing-xl); }
+  
+  .sleek-p-0 { padding: 0; }
+  .sleek-p-xs { padding: var(--sleek-spacing-xs); }
+  .sleek-p-sm { padding: var(--sleek-spacing-sm); }
+  .sleek-p-md { padding: var(--sleek-spacing-md); }
+  .sleek-p-lg { padding: var(--sleek-spacing-lg); }
+  .sleek-p-xl { padding: var(--sleek-spacing-xl); }
+  
+  .sleek-pt-0 { padding-top: 0; }
+  .sleek-pt-xs { padding-top: var(--sleek-spacing-xs); }
+  .sleek-pt-sm { padding-top: var(--sleek-spacing-sm); }
+  .sleek-pt-md { padding-top: var(--sleek-spacing-md); }
+  .sleek-pt-lg { padding-top: var(--sleek-spacing-lg); }
+  .sleek-pt-xl { padding-top: var(--sleek-spacing-xl); }
+  
+  .sleek-pr-0 { padding-right: 0; }
+  .sleek-pr-xs { padding-right: var(--sleek-spacing-xs); }
+  .sleek-pr-sm { padding-right: var(--sleek-spacing-sm); }
+  .sleek-pr-md { padding-right: var(--sleek-spacing-md); }
+  .sleek-pr-lg { padding-right: var(--sleek-spacing-lg); }
+  .sleek-pr-xl { padding-right: var(--sleek-spacing-xl); }
+  
+  .sleek-pb-0 { padding-bottom: 0; }
+  .sleek-pb-xs { padding-bottom: var(--sleek-spacing-xs); }
+  .sleek-pb-sm { padding-bottom: var(--sleek-spacing-sm); }
+  .sleek-pb-md { padding-bottom: var(--sleek-spacing-md); }
+  .sleek-pb-lg { padding-bottom: var(--sleek-spacing-lg); }
+  .sleek-pb-xl { padding-bottom: var(--sleek-spacing-xl); }
+  
+  .sleek-pl-0 { padding-left: 0; }
+  .sleek-pl-xs { padding-left: var(--sleek-spacing-xs); }
+  .sleek-pl-sm { padding-left: var(--sleek-spacing-sm); }
+  .sleek-pl-md { padding-left: var(--sleek-spacing-md); }
+  .sleek-pl-lg { padding-left: var(--sleek-spacing-lg); }
+  .sleek-pl-xl { padding-left: var(--sleek-spacing-xl); }
+  
+  /* Gap */
+  .sleek-gap-0 { gap: 0; }
+  .sleek-gap-xs { gap: var(--sleek-spacing-xs); }
+  .sleek-gap-sm { gap: var(--sleek-spacing-sm); }
+  .sleek-gap-md { gap: var(--sleek-spacing-md); }
+  .sleek-gap-lg { gap: var(--sleek-spacing-lg); }
+  .sleek-gap-xl { gap: var(--sleek-spacing-xl); }
+  
+  /* Text */
+  .sleek-text-xs { font-size: var(--sleek-font-size-xs); }
+  .sleek-text-sm { font-size: var(--sleek-font-size-sm); }
+  .sleek-text-md { font-size: var(--sleek-font-size-md); }
+  .sleek-text-lg { font-size: var(--sleek-font-size-lg); }
+  .sleek-text-xl { font-size: var(--sleek-font-size-xl); }
+  
+  .sleek-font-normal { font-weight: var(--sleek-font-weight-normal); }
+  .sleek-font-medium { font-weight: var(--sleek-font-weight-medium); }
+  .sleek-font-bold { font-weight: var(--sleek-font-weight-bold); }
+  
+  .sleek-text-left { text-align: left; }
+  .sleek-text-center { text-align: center; }
+  .sleek-text-right { text-align: right; }
+  
+  /* Colors */
+  .sleek-text-primary { color: var(--sleek-primary); }
+  .sleek-text-secondary { color: var(--sleek-secondary); }
+  .sleek-text-success { color: var(--sleek-success); }
+  .sleek-text-warning { color: var(--sleek-warning); }
+  .sleek-text-error { color: var(--sleek-error); }
+  .sleek-text-light { color: var(--sleek-text-light); }
+  .sleek-text-lighter { color: var(--sleek-text-lighter); }
+  
+  .sleek-bg-primary { background-color: var(--sleek-primary); }
+  .sleek-bg-secondary { background-color: var(--sleek-secondary); }
+  .sleek-bg-success { background-color: var(--sleek-success); }
+  .sleek-bg-warning { background-color: var(--sleek-warning); }
+  .sleek-bg-error { background-color: var(--sleek-error); }
+  .sleek-bg-light { background-color: var(--sleek-background-alt); }
+  
+  /* Border */
+  .sleek-border { border: var(--sleek-border-width) solid var(--sleek-border); }
+  .sleek-border-primary { border-color: var(--sleek-primary); }
+  .sleek-border-secondary { border-color: var(--sleek-secondary); }
+  .sleek-border-success { border-color: var(--sleek-success); }
+  .sleek-border-warning { border-color: var(--sleek-warning); }
+  .sleek-border-error { border-color: var(--sleek-error); }
+  
+  .sleek-rounded-sm { border-radius: var(--sleek-border-radius-sm); }
+  .sleek-rounded-md { border-radius: var(--sleek-border-radius-md); }
+  .sleek-rounded-lg { border-radius: var(--sleek-border-radius-lg); }
+  .sleek-rounded-full { border-radius: var(--sleek-border-radius-full); }
+  
+  /* Shadow */
+  .sleek-shadow-sm { box-shadow: var(--sleek-shadow-sm); }
+  .sleek-shadow-md { box-shadow: var(--sleek-shadow-md); }
+  .sleek-shadow-lg { box-shadow: var(--sleek-shadow-lg); }
+  
+  /* Visibility */
+  .sleek-visible { visibility: visible; }
+  .sleek-invisible { visibility: hidden; }
+  
+  /* Screen Reader Only */
+  .sleek-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }

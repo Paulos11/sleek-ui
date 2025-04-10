@@ -1,0 +1,156 @@
+/* Dropdown Component */
+.sleek-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .sleek-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--sleek-spacing-xs);
+    cursor: pointer;
+  }
+  
+  .sleek-dropdown-toggle-icon {
+    transition: transform var(--sleek-transition-fast);
+  }
+  
+  .sleek-dropdown.sleek-open .sleek-dropdown-toggle-icon {
+    transform: rotate(180deg);
+  }
+  
+  .sleek-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: var(--sleek-z-dropdown);
+    min-width: 10rem;
+    padding: var(--sleek-spacing-xs) 0;
+    margin-top: var(--sleek-spacing-xs);
+    background-color: var(--sleek-background);
+    border: var(--sleek-border-width) solid var(--sleek-border);
+    border-radius: var(--sleek-border-radius-md);
+    box-shadow: var(--sleek-shadow-md);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity var(--sleek-transition-normal), 
+                visibility var(--sleek-transition-normal),
+                transform var(--sleek-transition-normal);
+  }
+  
+  .sleek-dropdown.sleek-open .sleek-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .sleek-dropdown-menu-right {
+    left: auto;
+    right: 0;
+  }
+  
+  .sleek-dropdown-item {
+    display: block;
+    width: 100%;
+    padding: var(--sleek-spacing-sm) var(--sleek-spacing-md);
+    clear: both;
+    font-weight: var(--sleek-font-weight-normal);
+    color: var(--sleek-text);
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color var(--sleek-transition-fast);
+  }
+  
+  .sleek-dropdown-item:hover,
+  .sleek-dropdown-item:focus {
+    background-color: var(--sleek-background-alt);
+    text-decoration: none;
+  }
+  
+  .sleek-dropdown-item.sleek-active {
+    background-color: rgba(var(--sleek-primary-rgb, 59, 130, 246), 0.1);
+    color: var(--sleek-primary);
+  }
+  
+  .sleek-dropdown-item.sleek-disabled {
+    color: var(--sleek-text-lighter);
+    pointer-events: none;
+    background-color: transparent;
+  }
+  
+  .sleek-dropdown-divider {
+    height: 0;
+    margin: var(--sleek-spacing-xs) 0;
+    overflow: hidden;
+    border-top: 1px solid var(--sleek-border);
+  }
+  
+  .sleek-dropdown-header {
+    display: block;
+    padding: var(--sleek-spacing-xs) var(--sleek-spacing-md);
+    margin-bottom: 0;
+    font-size: var(--sleek-font-size-sm);
+    color: var(--sleek-text-light);
+    white-space: nowrap;
+  }
+  
+  /* Dropdown Sizes */
+  .sleek-dropdown-sm .sleek-dropdown-toggle {
+    font-size: var(--sleek-font-size-sm);
+  }
+  
+  .sleek-dropdown-sm .sleek-dropdown-item {
+    padding: var(--sleek-spacing-xs) var(--sleek-spacing-sm);
+    font-size: var(--sleek-font-size-sm);
+  }
+  
+  .sleek-dropdown-lg .sleek-dropdown-toggle {
+    font-size: var(--sleek-font-size-lg);
+  }
+  
+  .sleek-dropdown-lg .sleek-dropdown-item {
+    padding: var(--sleek-spacing-md) var(--sleek-spacing-lg);
+    font-size: var(--sleek-font-size-lg);
+  }
+  
+  /* Nested Dropdowns */
+  .sleek-dropdown-submenu {
+    position: relative;
+  }
+  
+  .sleek-dropdown-submenu .sleek-dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .sleek-dropdown-submenu .sleek-dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: 0;
+    margin-left: var(--sleek-spacing-xs);
+  }
+  
+  .sleek-dropdown-submenu.sleek-dropdown-submenu-left .sleek-dropdown-menu {
+    left: auto;
+    right: 100%;
+    margin-left: 0;
+    margin-right: var(--sleek-spacing-xs);
+  }
+  
+  /* Dropdown with search */
+  .sleek-dropdown-search {
+    padding: var(--sleek-spacing-xs) var(--sleek-spacing-sm);
+  }
+  
+  .sleek-dropdown-search .sleek-form-control {
+    width: 100%;
+    padding: var(--sleek-spacing-xs) var(--sleek-spacing-sm);
+    font-size: var(--sleek-font-size-sm);
+  }

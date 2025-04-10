@@ -1,0 +1,133 @@
+/* Button Base Styles */
+.sleek-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--sleek-spacing-sm) var(--sleek-spacing-md);
+    border-radius: var(--sleek-border-radius-md);
+    font-family: var(--sleek-font-family);
+    font-size: var(--sleek-font-size-md);
+    font-weight: var(--sleek-font-weight-medium);
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--sleek-transition-fast) ease-in-out;
+    user-select: none;
+    border: none;
+    outline: none;
+    white-space: nowrap;
+    gap: var(--sleek-spacing-sm);
+  }
+  
+  .sleek-btn:focus-visible {
+    outline: 2px solid var(--sleek-primary);
+    outline-offset: 2px;
+  }
+  
+  /* Button Variants */
+  .sleek-btn-primary {
+    background-color: var(--sleek-primary);
+    color: white;
+  }
+  
+  .sleek-btn-primary:hover {
+    background-color: var(--sleek-primary-hover);
+  }
+  
+  .sleek-btn-primary:active {
+    background-color: var(--sleek-primary-active);
+  }
+  
+  .sleek-btn-secondary {
+    background-color: var(--sleek-secondary);
+    color: white;
+  }
+  
+  .sleek-btn-secondary:hover {
+    background-color: var(--sleek-secondary-hover);
+  }
+  
+  .sleek-btn-secondary:active {
+    background-color: var(--sleek-secondary-active);
+  }
+  
+  .sleek-btn-ghost {
+    background-color: transparent;
+    color: var(--sleek-text);
+    border: var(--sleek-border-width) solid var(--sleek-border);
+  }
+  
+  .sleek-btn-ghost:hover {
+    background-color: var(--sleek-background-alt);
+    border-color: var(--sleek-text-lighter);
+  }
+  
+  .sleek-btn-ghost:active {
+    background-color: var(--sleek-border);
+  }
+  
+  /* Button States */
+  .sleek-btn:disabled,
+  .sleek-btn.sleek-btn-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  /* Button Sizes */
+  .sleek-btn-sm {
+    padding: var(--sleek-spacing-xs) var(--sleek-spacing-sm);
+    font-size: var(--sleek-font-size-sm);
+    border-radius: var(--sleek-border-radius-sm);
+  }
+  
+  .sleek-btn-lg {
+    padding: var(--sleek-spacing-md) var(--sleek-spacing-lg);
+    font-size: var(--sleek-font-size-lg);
+  }
+  
+  /* Button with icons */
+  .sleek-btn-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sleek-spacing-sm);
+  }
+  
+  .sleek-btn-icon-only {
+    padding: var(--sleek-spacing-sm);
+    border-radius: var(--sleek-border-radius-md);
+    aspect-ratio: 1;
+  }
+  
+  .sleek-btn-icon-only.sleek-btn-sm {
+    padding: var(--sleek-spacing-xs);
+  }
+  
+  .sleek-btn-icon-only.sleek-btn-lg {
+    padding: var(--sleek-spacing-md);
+  }
+  
+  /* Button Loading State */
+  .sleek-btn-loading {
+    position: relative;
+    color: transparent !important;
+    pointer-events: none;
+  }
+  
+  .sleek-btn-loading::after {
+    content: "";
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    animation: sleek-btn-spinner 0.75s linear infinite;
+  }
+  
+  @keyframes sleek-btn-spinner {
+    to {
+      transform: rotate(360deg);
+    }
+  }

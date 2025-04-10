@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sleek UI - Modern Component Library</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="js/main.js" type="module" defer></script>
+  <style>
+    /* Demo page styles */
+    body {
+      padding: 2rem;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    section {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--sleek-border);
+    }
+    
+    h1, h2, h3 {
+      margin-bottom: 1rem;
+    }
+    
+    .component-demo {
+      padding: 1.5rem;
+      border: 1px solid var(--sleek-border);
+      border-radius: var(--sleek-border-radius-md);
+      margin-bottom: 1rem;
+    }
+    
+    .code-example {
+      background-color: var(--sleek-background-alt);
+      padding: 1rem;
+      border-radius: var(--sleek-border-radius-md);
+      margin-top: 1rem;
+      overflow: auto;
+    }
+    
+    pre {
+      margin: 0;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Sleek UI Component Library</h1>
+      <p>A lightweight, accessible component library for modern web projects.</p>
+    </header>
+    
+    <main>
+      <!-- Button Component Demo -->
+      <section id="buttons">
+        <h2>Buttons</h2>
+        <p>Our button components with different variants and states.</p>
+        
+        <div class="component-demo">
+          <h3>Button Variants</h3>
+          <div class="sleek-flex sleek-gap-md sleek-mb-md">
+            <button class="sleek-btn sleek-btn-primary">Primary Button</button>
+            <button class="sleek-btn sleek-btn-secondary">Secondary Button</button>
+            <button class="sleek-btn sleek-btn-ghost">Ghost Button</button>
+          </div>
+          
+          <h3>Button Sizes</h3>
+          <div class="sleek-flex sleek-items-center sleek-gap-md sleek-mb-md">
+            <button class="sleek-btn sleek-btn-primary sleek-btn-sm">Small</button>
+            <button class="sleek-btn sleek-btn-primary">Default</button>
+            <button class="sleek-btn sleek-btn-primary sleek-btn-lg">Large</button>
+          </div>
+          
+          <h3>Button States</h3>
+          <div class="sleek-flex sleek-gap-md">
+            <button class="sleek-btn sleek-btn-primary">Normal</button>
+            <button class="sleek-btn sleek-btn-primary sleek-btn-loading">Loading</button>
+            <button class="sleek-btn sleek-btn-primary" disabled>Disabled</button>
+          </div>
+        </div>
+        
+        <div class="code-example">
+          <pre><code>&lt;button class="sleek-btn sleek-btn-primary"&gt;Primary Button&lt;/button&gt;
+&lt;button class="sleek-btn sleek-btn-secondary"&gt;Secondary Button&lt;/button&gt;
+&lt;button class="sleek-btn sleek-btn-ghost"&gt;Ghost Button&lt;/button&gt;
+
+&lt;!-- Button Sizes --&gt;
+&lt;button class="sleek-btn sleek-btn-primary sleek-btn-sm"&gt;Small&lt;/button&gt;
+&lt;button class="sleek-btn sleek-btn-primary"&gt;Default&lt;/button&gt;
+&lt;button class="sleek-btn sleek-btn-primary sleek-btn-lg"&gt;Large&lt;/button&gt;
+
+&lt;!-- Button States --&gt;
+&lt;button class="sleek-btn sleek-btn-primary sleek-btn-loading"&gt;Loading&lt;/button&gt;
+&lt;button class="sleek-btn sleek-btn-primary" disabled&gt;Disabled&lt;/button&gt;</code></pre>
+        </div>
+      </section>
+      
+      <!-- Modal Component Demo -->
+      <section id="modals">
+        <h2>Modals</h2>
+        <p>A lightweight, accessible modal dialog component.</p>
+        
+        <div class="component-demo">
+          <h3>Modal Sizes</h3>
+          <div class="sleek-flex sleek-gap-md">
+            <button class="sleek-btn sleek-btn-primary" data-sleek-modal-open="smallModal">Small Modal</button>
+            <button class="sleek-btn sleek-btn-primary" data-sleek-modal-open="defaultModal">Default Modal</button>
+            <button class="sleek-btn sleek-btn-primary" data-sleek-modal-open="largeModal">Large Modal</button>
+          </div>
+          
+          <!-- Small Modal -->
+          <div class="sleek-modal sleek-modal-sm" id="smallModal">
+            <div class="sleek-modal-content">
+              <div class="sleek-modal-header">
+                <h4 class="sleek-modal-title">Small Modal</h4>
+                <button class="sleek-modal-close" data-sleek-modal-close aria-label="Close">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+              </div>
+              <p>This is a small modal dialog.</p>
+              <div class="sleek-modal-footer">
+                <button class="sleek-btn sleek-btn-ghost" data-sleek-modal-close>Cancel</button>
+                <button class="sleek-btn sleek-btn-primary">Confirm</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Default Modal -->
+          <div class="sleek-modal sleek-modal-md" id="defaultModal">
+            <div class="sleek-modal-content">
+              <div class="sleek-modal-header">
+                <h4 class="sleek-modal-title">Default Modal</h4>
+                <button class="sleek-modal-close" data-sleek-modal-close aria-label="Close">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+              </div>
+              <p>This is a default sized modal dialog with some content.</p>
+              <p>You can add more content here as needed for your application.</p>
+              <div class="sleek-modal-footer">
+                <button class="sleek-btn sleek-btn-ghost" data-sleek-modal-close>Cancel</button>
+                <button class="sleek-btn sleek-btn-primary">Confirm</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Large Modal -->
+          <div class="sleek-modal sleek-modal-lg" id="largeModal">
+            <div class="sleek-modal-content">
+              <div class="sleek-modal-header">
+                <h4 class="sleek-modal-title">Large Modal</h4>
+                <button class="sleek-modal-close" data-sleek-modal-close aria-label="Close">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+              </div>
+              <p>This is a large modal dialog with plenty of space for content.</p>
+              <p>You can add much more content here for complex forms or detailed information.</p>
+              <p>The modal is also fully responsive and will adapt to different screen sizes.</p>
+              <div class="sleek-modal-footer">
+                <button class="sleek-btn sleek-btn-ghost" data-sleek-modal-close>Cancel</button>
+                <button class="sleek-btn sleek-btn-primary">Confirm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="code-example">
+          <pre><code>&lt;!-- Button to open the modal --&gt;
+&lt;button class="sleek-btn sleek-btn-primary" data-sleek-modal-open="myModal"&gt;Open Modal&lt;/button&gt;
+
+&lt;!-- Modal component --&gt;
+&lt;div class="sleek-modal sleek-modal-md" id="myModal"&gt;
+  &lt;div class="sleek-modal-content"&gt;
+    &lt;div class="sleek-modal-header"&gt;
+      &lt;h4 class="sleek-modal-title"&gt;Modal Title&lt;/h4&gt;
+      &lt;button class="sleek-modal-close" data-sleek-modal-close aria-label="Close"&gt;
+        &lt;!-- Close icon --&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Modal content goes here...&lt;/p&gt;
+    &lt;div class="sleek-modal-footer"&gt;
+      &lt;button class="sleek-btn sleek-btn-ghost" data-sleek-modal-close&gt;Cancel&lt;/button&gt;
+      &lt;button class="sleek-btn sleek-btn-primary"&gt;Confirm&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      
+      <!-- More component sections will be added for future components -->
+      
+    </main>
+    
+    <footer class="sleek-mt-xl sleek-pt-lg">
+      <p>Sleek UI - A lightweight, accessible component library.</p>
+      <p>Licensed under MIT.</p>
+    </footer>
+  </div>
+</body>
+</html>

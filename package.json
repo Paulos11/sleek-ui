@@ -1,0 +1,24 @@
+{
+  "name": "sleek-ui",
+  "version": "1.0.0",
+  "description": "A lightweight, accessible component library for modern web projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server . -p 3000 -o"
+  },
+  "keywords": [
+    "ui",
+    "component-library",
+    "css",
+    "javascript",
+    "responsive",
+    "accessible",
+    "web-components"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
